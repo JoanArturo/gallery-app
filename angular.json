@@ -30,6 +30,7 @@
               "src/assets"
             ],
             "styles": [
+              "remixicon/fonts/remixicon.css",
               "src/styles.scss"
             ],
             "scripts": [
