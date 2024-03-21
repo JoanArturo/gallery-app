@@ -1,0 +1,35 @@
+<section class="bg-light border-bottom">
+  <!-- Errors -->
+  <div class="alert alert-danger border-0 rounded-0 mb-0" *ngIf="errors.length > 0">
+    <ul class="container mb-0">
+      <li *ngFor="let error of errors"><i class="ri-alert-line"></i> {{ error }}</li>
+    </ul>
+  </div>
+
+  <!-- Success Message -->
+  <div class="alert alert-success border-0 rounded-0 mb-0" *ngIf="responseMessage">
+    <p class="container px-0 mb-0 fw-bold">
+      <i class="ri-check-line ms-2"></i>
+      {{ responseMessage }}
+    </p>
+  </div>
+
+  <!-- Image Form -->
+  <form
+    [formGroup]="imageForm"
+    (ngSubmit)="onSubmit()"
+    class="container py-4"
+    >
+    <div class="d-flex align-items-end gap-3">
+      <div>
+        <label class="form-label">Título</label>
+        <input type="text" class="form-control" formControlName="title">
+      </div>
+      <div>
+        <label class="form-label">Imagen</label>
+        <input type="file" class="form-control" (change)="onChange($event)" #inputFile>
+      </div>
+      <button class="btn btn-primary" type="submit">Guardar</button>
+    </div>
+  </form>
+</section>
