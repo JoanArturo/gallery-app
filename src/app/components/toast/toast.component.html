@@ -1,0 +1,17 @@
+<ngb-toast
+  *ngFor="let toast of toastService.toasts"
+  [class]="toast.classname"
+  [autohide]="true"
+  [delay]="toast.delay || 5000"
+  (hidden)="toastService.remove(toast)"
+  >
+  <!-- Header -->
+  <ng-template ngbToastHeader>
+    <strong class="me-auto">
+      <i [class]="toast.icon + ' me-2'" *ngIf="toast.icon"></i> {{ toast.header }}
+    </strong>
+  </ng-template>
+
+  <!-- Body -->
+  {{ toast.body }}
+</ngb-toast>

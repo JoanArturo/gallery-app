@@ -11,6 +11,7 @@ import { GalleryComponent } from './components/gallery/gallery.component';
 import { ImageFormComponent } from './components/image-form/image-form.component';
 import { ImageComponent } from './components/image/image.component';
 import { ImageModalComponent } from './components/image-modal/image-modal.component';
+import { ToastComponent } from './components/toast/toast.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ImageModalComponent } from './components/image-modal/image-modal.compon
     GalleryComponent,
     ImageFormComponent,
     ImageComponent,
-    ImageModalComponent
+    ImageModalComponent,
+    ToastComponent
   ],
   imports: [
     BrowserModule,
