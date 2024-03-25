@@ -1,0 +1,22 @@
+<!-- Spinner -->
+<div class="loading-spinner rounded" [hidden]="!isLoading">
+  <i class="ri-loader-4-line"></i>
+</div>
+
+<!-- Image Card -->
+<div class="card text-bg-dark" [hidden]="isLoading">
+  <img [src]="image.path" class="card-img" (load)="onLoad()">
+  <div class="card-img-overlay">
+    <h5 class="card-title">{{ image.title }}</h5>
+    <p class="card-text"><small>Guardado el {{ image.created_at | date }}</small></p>
+
+    <div class="card-actions">
+      <button class="btn btn-danger w-100">
+        <i class="ri-delete-bin-5-line"></i> Eliminar
+      </button>
+      <button class="btn btn-primary w-100">
+        <i class="ri-eye-line"></i> Ver
+      </button>
+    </div>
+  </div>
+</div>
