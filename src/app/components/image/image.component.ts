@@ -3,6 +3,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Image } from 'src/app/models/image.model';
 import { ImageService } from 'src/app/services/image.service';
 import { ImageModalComponent } from '../image-modal/image-modal.component';
+import { ToastService } from 'src/app/services/toast.service';
 
 @Component({
   selector: 'app-image',
@@ -20,7 +21,8 @@ export class ImageComponent {
 
   constructor(
     private imageService: ImageService,
-    private modalService: NgbModal
+    private modalService: NgbModal,
+    private toastService: ToastService
   ) {}
 
   onLoad(): void {
@@ -40,6 +42,7 @@ export class ImageComponent {
   }
 
   private handleResponse(response: any): void {
+    this.toastService.show('Eliminación', response.message, { classname: 'bg-success text-white', icon: 'ri-check-line' });
     this.deletedImage.emit(this.image.id);
   }
 }
