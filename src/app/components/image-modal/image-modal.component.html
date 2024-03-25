@@ -1,0 +1,11 @@
+<div class="modal-header">
+  <div>
+    <h4 class="modal-title">{{ image.title }}</h4>
+    <p class="mb-0 text-secondary">Guardado el {{ image.created_at | date }}</p>
+  </div>
+  <button type="button" class="btn-close mb-4" aria-label="Close" (click)="activeModal.dismiss()"></button>
+</div>
+
+<div class="modal-body p-0">
+  <img [src]="image.path" class="img-fluid rounded-bottom w-100" [alt]="image.title">
+</div>

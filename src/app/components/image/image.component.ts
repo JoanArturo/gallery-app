@@ -1,6 +1,8 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Image } from 'src/app/models/image.model';
 import { ImageService } from 'src/app/services/image.service';
+import { ImageModalComponent } from '../image-modal/image-modal.component';
 
 @Component({
   selector: 'app-image',
@@ -16,10 +18,18 @@ export class ImageComponent {
   @Output()
   deletedImage: EventEmitter<number> = new EventEmitter<number>();
 
-  constructor(private imageService: ImageService) {}
+  constructor(
+    private imageService: ImageService,
+    private modalService: NgbModal
+  ) {}
 
   onLoad(): void {
     this.isLoading =  false;
+  }
+
+  openImageModal(): void {
+    const modalRef = this.modalService.open(ImageModalComponent, { size: 'lg' });
+    modalRef.componentInstance.image = this.image;
   }
 
   deleteImage(): void {

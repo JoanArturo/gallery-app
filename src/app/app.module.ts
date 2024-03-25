@@ -10,6 +10,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { ImageFormComponent } from './components/image-form/image-form.component';
 import { ImageComponent } from './components/image/image.component';
+import { ImageModalComponent } from './components/image-modal/image-modal.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ImageComponent } from './components/image/image.component';
     NavbarComponent,
     GalleryComponent,
     ImageFormComponent,
-    ImageComponent
+    ImageComponent,
+    ImageModalComponent
   ],
   imports: [
     BrowserModule,
