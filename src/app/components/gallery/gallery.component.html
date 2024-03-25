@@ -6,7 +6,7 @@
 
   <div class="row" *ngIf="images.length > 0; else emptyGallery">
     <div class="col-12 col-md-6 col-lg-3 mb-3" *ngFor="let image of images">
-      <app-image [image]="image"></app-image>
+      <app-image [image]="image" (deletedImage)="onDeletedImage($event)"></app-image>
     </div>
   </div>
   <ng-template #emptyGallery>

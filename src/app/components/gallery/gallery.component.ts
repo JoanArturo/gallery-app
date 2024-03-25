@@ -22,4 +22,12 @@ export class GalleryComponent implements OnInit {
     this.images.unshift(image);
     console.log(this.images);
   }
+
+  onDeletedImage(imageId: number): void {
+    const index = this.images.findIndex(image => image.id === imageId);
+
+    if (index !== -1) {
+      this.images.splice(index, 1);
+    }
+  }
 }

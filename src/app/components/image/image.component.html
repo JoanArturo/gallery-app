@@ -11,7 +11,10 @@
     <p class="card-text"><small>Guardado el {{ image.created_at | date }}</small></p>
 
     <div class="card-actions">
-      <button class="btn btn-danger w-100">
+      <button
+        class="btn btn-danger w-100"
+        (click)="deleteImage()"
+        >
         <i class="ri-delete-bin-5-line"></i> Eliminar
       </button>
       <button class="btn btn-primary w-100">
