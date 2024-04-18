@@ -1,27 +1,44 @@
-# GalleryApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.12.
+# Gallery APP
 
-## Development server
+El propósito de este proyecto es desarrollar una galería de imágenes utilizando la tecnología Angular. Este sistema incluye funciones básicas como la visualización de un listado de imágenes, la capacidad de guardar y eliminar imágenes, así como la opción de ver cada imagen de forma individual mediante un modal. Es importante mencionar que está estrechamente vinculado al proyecto [Gallery API](https://github.com/JoanArturo/gallery-api), el cual ofrece una API para la ejecución de las distintas operaciones que se mencionaron con aterioridad.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Pre-requisitos 📋
 
-## Code scaffolding
+Para la correcta ejecución de este proyecto, necesitas tener las siguientes tecnologías instaladas en tu ordenador.
+* Node 18.17.0
+* npm 9.6.7
+* Angular CLI 16.2.12
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+**IMPORTANTE: Es indispensable tener clonado y en ejecución el proyecto [Gallery API](https://github.com/JoanArturo/gallery-api)**
 
-## Build
+## Instalación 🔧
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Clona este proyecto.
+```bash
+git clone https://github.com/JoanArturo/gallery-app.git
+```
 
-## Running unit tests
+2. Instala las dependencias de node con npm.
+```bash
+npm install
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+3. Ejecuta el proyecto Angular en modo desarrollo y navega a `http://localhost:4200/`.
+```bash
+ng serve
+```
 
-## Running end-to-end tests
+4. Ejecuta el proyecto backend `Gallery API` realizado con Laravel para que la aplicación Angular consuma los endpoints, si aún no lo tienes puedes clonarlo desde el [repositorio Gallery API](https://github.com/JoanArturo/gallery-api).
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Construido con 🛠️
 
-## Further help
+- [Node 18.17.0](https://nodejs.org/en/download)
+- [npm 9.6.7](https://www.npmjs.com/package/npm/v/9.6.7)
+- [Angular CLI 16.2.12](https://v16.angular.io/docs)
+- [Bootstrap 5.2.3](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
+- [Remix Icon 4.2.0](https://remixicon.com/)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Autor 🖋️
+
+- [@JoanArturo](https://github.com/JoanArturo)
